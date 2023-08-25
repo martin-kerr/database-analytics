@@ -19,5 +19,6 @@ WHERE ElectrodeType =""
 SELECT ElectrodeType, COUNT (ElectrodeType) AS Users
 FROM Electrodes
 GROUP BY ElectrodeType
+HAVING COUNT (ElectrodeType) > 0
 ORDER BY Users DESC ,ElectrodeType 
 ;
